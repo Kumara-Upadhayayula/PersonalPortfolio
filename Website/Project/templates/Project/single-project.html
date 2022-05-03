@@ -1,0 +1,47 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<main class="singleProject my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          
+          <br>
+          <br>
+          <br>
+          <br>
+            <h3 class="singleProject__subtitle">Tools & Stacks</h3>
+          <div class="singleProject__toolStack">
+            
+            {% for tag in tags %}
+            <span class="tag tag--pill tag--sub tag--lg">
+              <small>{{tag.name}}</small>
+            </span>
+            {% endfor %}
+          </div>
+          <a class="singleProject__liveLink" href="#" target="_blank"><i class="im im-external-link"></i>Source Code
+          </a>
+        </div>
+        <div class="column column--2of3">
+            <br>
+          <img class="singleProject__preview" src="{{project.imageURL}}" alt="portfolio thumbnail" style="height: 60%; width: 70%;" />
+          <h5> By Kumara Upadhayayula</h5>
+          <h2 class="singleProject__title">{{project.title}}</h2>
+          <h3 class="singleProject__subtitle">About the Project</h3>
+          <div class="singleProject__info">
+           {{project.description}}
+
+            <br />
+            <br />
+           
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+  </main>
+{% endblock content%}

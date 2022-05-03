@@ -1,0 +1,24 @@
+{% load static%}
+
+<header class="header">
+    <div class="container container--narrow">
+      <a href="" class="header__logo">
+        <img  style="
+        filter: invert(1); transform: scale(2); padding-left: 55px;" src="{% static 'images/angry.png' %}" alt="DevSearch Logo" />
+      </a>
+      <nav class="header__nav">
+        <input type="checkbox" id="responsive-menu" />
+        <label for="responsive-menu" class="toggle-menu">
+          <span>Menu</span>
+          <div class="toggle-menu__lines"></div>
+        </label>
+        <ul class="header__menu">
+          <li class="header__menuItem"><a href="{% url 'about' %}">About Me</a></li>
+          <li class="header__menuItem"><a href="{% url 'home' %}">Projects</a></li>
+          
+          
+          <li class="header__menuItem"><a href="{% url 'contact' %}" class="btn btn--sub">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>

@@ -1,0 +1,93 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+  <!-- Main Section -->
+  <main class="profile my-md">
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+          <div class="card text-center">
+            <div class="card__body dev">
+              <img class="avatar avatar--xl" src="https://media-exp1.licdn.com/dms/image/C5603AQHwBLl05Igq3w/profile-displayphoto-shrink_200_200/0/1611875170428?e=1655942400&v=beta&t=0Q1J_Q-2_dw6HJ8C808BWgtshZRDfIEhL0pkyFLImuU" />
+              <h2 class="dev__name">Kumara Upadhayayula</h2>
+              <p class="dev__title">Microsoft 365 Developer</p>
+              <p class="dev__location">Based in Melbourne, Australia</p>
+              <ul class="dev__social">
+                <li>
+                  <a title="Github" href="https://github.com/Kumara-Upadhayayula" target="_blank"><i class="im im-github"></i></a>
+                </li>
+
+                <li>
+                  <a title="LinkedIn" href="https://www.linkedin.com/in/kumara-upadhayayula-b88a97181/" target="_blank"><i class="im im-linkedin"></i></a>
+                </li>
+                <li>
+                  <a title="Personal Website" href="#" target="_blank"><i class="im im-globe"></i></a>
+                </li>
+              </ul>
+              <a href="#" class="btn btn--sub btn--lg">Download Resume </a>
+            </div>
+          </div>
+        </div>
+        <div class="column column--2of3">
+          <div class="devInfo">
+            <h3 class="devInfo__title">About Me</h3>
+            <p class="devInfo__about">
+              Im a Microsoft 365 certified developer specializing in the cloud. I leverage my skills in Web development, Python and Microsoft Stack to help digitilize buissnessess. These are all the projects and skills that I have been involved with over my three year IT career.
+              <br />
+              
+            </p>
+          </div>
+          <div class="devInfo">
+            <h3 class="devInfo__title">Skills</h3>
+            <div class="devInfo__skills">
+              <div class="devSkill">
+                <h4 class="devSkill__title">Python</h4>
+                <p class="devSkill__info">
+                  Developing custom programs to help visuliaze solutions to comletx program with the help of programming. Highly skilled in python and can customize workflows for buissness using this language
+                </p>
+              </div>
+              <div class="devSkill">
+                <h4 class="devSkill__title">PowerShell</h4>
+                <p class="devSkill__info">
+                  Customizing workflow solutions to major administration / report generation of the M365 suite. Well veresed in automating simple and complex tasks in this language.
+                </p>
+              </div>
+              <div class="devSkill">
+                <h4 class="devSkill__title">Microsoft Stack</h4>
+                <p class="devSkill__info">
+                  Successfully deployed mulitple office 365 solutions to users meeting niche buissness problems. Proficient in all the administration of the office 365 products. Currently upskilling in developing SHarepoint SItes and Teams Bots to leverage the complete O365 suite for workflows.
+                </p>
+              </div>
+
+              <h3 class="devInfo__subtitle">Other Skills</h3>
+              <div class="devInfo__otherSkills">
+                {% for tags in tag %}
+                <span class="tag tag--pill tag--sub tag--lg">
+                  <small>{{tags.name}}</small>
+                </span>
+                {% endfor %}
+                
+              </div>
+              <br>
+              <h3 class="devInfo__subtitle">Certifications</h3>
+              <div class="devInfo__otherSkills">
+                {% for dag in certificationobj %}
+                <img src="{{dag.url}}" style="height: 15%;width: 15%;">
+                {% endfor %}
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  {% endblock content%}
+</body>
+
+</html>
