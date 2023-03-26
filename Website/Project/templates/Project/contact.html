@@ -10,7 +10,7 @@
         <div class="column column--1of3">
           <div class="card text-center">
             <div class="card__body dev">
-              <img class="avatar avatar--xl" src="https://media-exp1.licdn.com/dms/image/C5603AQHwBLl05Igq3w/profile-displayphoto-shrink_200_200/0/1611875170428?e=1655942400&v=beta&t=0Q1J_Q-2_dw6HJ8C808BWgtshZRDfIEhL0pkyFLImuU" />
+              <img class="avatar avatar--xl" src="https://media.licdn.com/dms/image/C5603AQHwBLl05Igq3w/profile-displayphoto-shrink_800_800/0/1611875170428?e=1685577600&v=beta&t=WvluXLf96Wiy9uFe3wuF7R27rD_Ae3vojFLGDDX37gg" />
               <h2 class="dev__name">Kumara Upadhayayula</h2>
               <p class="dev__title">Microsoft 365 Developer</p>
               <p class="dev__location">Based in Melbourne, Australia</p>
@@ -32,22 +32,10 @@
         </div>
         <div class="column column--2of3">
             <div class="hero-section__box">
-            <h3>Contact Me</h3>
+            <h3>&lt;&gt; INSPIRATION &lt;/&gt;</h3>
             </div>
 
-            <br>
-            <form class="form" method='POST' action="" enctype="multipart/form-data">
-                {% csrf_token %}
-                {% for field in form%}
-                <!-- Input:Text -->
-                <div class="form__field">
-                    <label for="formInput#text">{{field.label}} </label>
-                    {{field}}
-                </div>
-                {% endfor %}
-                <input class="btn btn--sub btn--lg  my-md" type="submit" value="Submit" />
-                </form>
-            
+            <p>Ever since I can remember, I've been captivated by the power and potential of technology. I am constantly in awe of the ways it has transformed our lives, streamlined processes, and connected people across the globe. This deep-rooted passion has driven me to explore various aspects of the tech world, ultimately leading me to my goal of becoming a DevOps engineer. In my pursuit, I've come to appreciate the beauty of seamless integration, efficient workflows, and continuous delivery. The allure of creating harmony between development and operations is what fuels my desire to learn and grow as a professional. I am committed to honing my skills and pushing the boundaries of what I know, so that I can become an exceptional DevOps engineer, bridging the gap between developers and IT operations in order to create better, faster, and more reliable software solutions.</p>
         </div>
     </main>
 {% endblock content%}
